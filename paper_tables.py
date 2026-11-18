@@ -385,7 +385,7 @@ def esm_mc(der):
         (r"Landmark misplacement, SD per axis$^{\mathrm{b}}$", "", ""),
         (r"\quad Pelvis markers", rf"{land['asis']:g}\,mm", r"\cite{dellacroce1999,fonseca2023}"),
         (r"\quad Knee; ankle", rf"{land['knee']:g}; {land['ankle']:g}\,mm", r"\cite{dellacroce1999,fonseca2023}"),
-        (r"\quad Heel; fifth metatarsal", rf"{land['heel']:g}; {land['toe']:g}\,mm", r"declared$^{\mathrm{c}}$"),
+        (r"\quad Heel; fifth metatarsal", rf"{land['heel']:g}; {land['toe']:g}\,mm", r"set here$^{\mathrm{c}}$"),
         (r"Segment parameters, relative SD$^{\mathrm{d}}$", "", ""),
         (r"\quad HAT", "; ".join(pc(x) for x in bs["hat"]) + r"\,\%", r"\cite{rossi2013}"),
         (r"\quad Thigh", "; ".join(pc(x) for x in bs["thigh"]) + r"\,\%", r"\cite{rossi2013}"),
@@ -393,7 +393,7 @@ def esm_mc(der):
         (r"\quad Foot", "; ".join(pc(x) for x in bs["foot"]) + r"\,\%", r"\cite{rossi2013}"),
         (r"Rigid HAT", "per trial", "trunk markers"),
         (r"CoP placement", "", ""),
-        (r"\quad Insole displacement in the shoe, SD", rf"{v['cop']['shoe_mm']:g}\,mm", r"declared$^{\mathrm{e}}$"),
+        (r"\quad Insole displacement in the shoe, SD", rf"{v['cop']['shoe_mm']:g}\,mm", r"set here$^{\mathrm{e}}$"),
         (r"\quad Insole--marker time shift, SD", rf"{WC.DT_MS:g}\,ms", r"data$^{\mathrm{f}}$"),
     ]
     body = "\n".join(f"{a} & {b} & {c} " + r"\\" for a, b, c in rows)
@@ -413,7 +413,7 @@ Input & Value & Source \\
 \smallskip
 {\footnotesize a, along a random sagittal direction (within $30^{\circ}$ of cranial for the pelvis markers), scaled by the
 normalized angle of the joint that moves the marker (hip for the iliac spines, both hips for the sacrum, knee for the knee
-and ankle markers, ankle for the foot markers); b, constant within a trial; c, no source, the middle of 0--12\,mm;
+and ankle markers, ankle for the foot markers); b, constant within a trial; c, no source, the middle of 0 to 12\,mm;
 d, mass; CoM location; radius of gyration, masses renormalized to the body mass; e, a uniform displacement within half an
 insole size step; f, root mean square, over the SHIFTN trials in which the summed insole force correlates with the camera's
 $S_z$ at 0.5 or more, of the shift that maximizes that correlation.\par}
@@ -442,7 +442,7 @@ def esm_contrasts(main):
         if case == "camera":
             lines.append(r"\addlinespace")
     txt = r"""\begin{table}[!htbp]
-\caption{The factor graph against the closest competing method of Table~3 in each column (for the CoP, against the
+\caption{The factor graph against the closest competing method of Table~3 in each shear and joint-moment column (for the CoP, against the
 insole's CoP as placed): subject means, difference in percent of the competitor's mean, paired 95\,\% $t$ interval of the
 difference over the nine subjects, and the subjects with the lower error with the factor graph}
 \label{tab:s:contrasts}

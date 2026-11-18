@@ -151,8 +151,8 @@ def check_esm(N):
     ecase("one subject without the 0.75 m/s trial", all(SP[(c, 0.75, k)]["n"] == 8 for c in MN.CASES for k in MN.COLS)
           and num("sec:data") == "3", r"at \SI{0.75}{\metre\per\second} one subject has no trial (Sect.~3)")
     ecase("Sect. 4.2 = Monte Carlo", num("sec:devicevalues") == "4.2", r"on the data's own markers (Sect.~4.2)")
-    ecase("Table 2 = kinematic values", num("tab:kinematic") == "2", r"each value of Table~2 is the median")
-    ecase("Table 3 = results", num("tab:results") == "3", r"for every error column of Table~3")
+    ecase("Table 2 = kinematic values", num("tab:kinematic") == "2", r"each camera value of Table~2 is the median")
+    ecase("Table 3 = results", num("tab:results") == "3", r"for every shear and joint-moment column of Table~3")
     ecase("Sect. 5.5 = ablation", num("sec:res:ablation") == "5.5", r"the removal of the direction factor (Sect.~5.5)")
     mask = masked(txt, [(r"\\(label|ref|cite|input|url)(\[[^\]]*\])?\{[^}]*\}", 0),
                         (r"\$[^$]*\\(dot|sigma|bm|mathbf)[^$]*\$", 0),
@@ -237,7 +237,7 @@ def check_text(N):
                "The measured vertical force is the true one times the scale", "It asks the forces to change smoothly",
                "(dir in double support only)", "The balances also link every frame to the kinematics",
                "the sensor factors to the", "at $z = 0$", "both CoPs lie at $z = 0$",
-               "at the height of the CoM ($d_z = 0$)", "three consecutive frames"):
+               "at the height of the CoM ($d_z = 0$)", "and also in both neighboring frames"):
         fact("design: " + ph, True, ph)
 
     # values
@@ -449,6 +449,8 @@ def check_text(N):
     fact("no direction: knee and hip errors rise more in single than in double support",
          all(rel(c, f"{j}_ss") > max(rel(c, f"{j}_ds"), 0) for c in MN.CASES for j in ("knee", "hip")),
          "the knee and hip errors rise mostly in single support")
+    fact("no direction: camera hip error falls in double support", rel("camera", "hip_ds") < 0,
+         "while with camera kinematics the hip error falls in double support")
     fact("direction study reproduces the ablation", all(np.isclose(DN[(c, "no direction")]["shear_stance"],
                                                                    AB[(c, "no direction")]["abs"]["stance"]) for c in MN.CASES))
     ph = (r"which the kinematics give as \num{-0.033}\,m\,BW with camera and \num{-0.031} with IMU kinematics "
@@ -513,7 +515,7 @@ def check_text(N):
          "with IMU kinematics only at the knee, at three ends")
     sl = {c: [(r, e) for r, e in ends if set(SE[(c, r, e)]["lost"]) & set(MN.SHEAR)] for c in MN.CASES}
     fact("shear lead lost at 7 (camera) and 4 (imu) ends", len(sl["camera"]) == 7 and len(sl["imu"]) == 4,
-         "some shear column is lost at seven of the eighteen ends with camera and at four with IMU kinematics")
+         "at least one shear column is lost at seven of the eighteen ends with camera and at four with IMU kinematics")
     main3 = {("pivot forward", "high"), ("direction deviation", "low"), ("kinematic uncertainties", "high")}
     fact("shear lost at pivot-forward high, direction low, kinematic high in both cases",
          all(main3 <= set(sl[c]) for c in MN.CASES), "mainly when the pivot is moved forward, the direction uncertainty "
