@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# the data set is not redistributed (README.md, "Data")
+data/
+
+# LaTeX tables and Fig. 2, recreated by paper_tables.py and figure2.py
+output/
+
+# logs
+*.log

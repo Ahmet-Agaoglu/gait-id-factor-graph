@@ -1,0 +1,23 @@
+run_ablation2.py summary, 2026-11-18T14:04:34: 9 subjects, 53 trials; converged 318/318. Subject means; change vs main (plus = error grows when the parts are removed); in brackets the number of subjects where the error grows.
+check camera: main vs main.csv max |diff| 0.00e+00
+sanity camera: 'balances and sensors only' vs newton share, max |diff| per column: stance 8.88e-16, ds 3.55e-15, ss 8.88e-16, ankle 1.61e-01, knee 1.29e-01, hip 1.88e-01, fz_stance 1.06e+01
+check imu: main vs main.csv max |diff| 0.00e+00
+sanity imu: 'balances and sensors only' vs newton share, max |diff| per column: stance 8.88e-16, ds 3.55e-15, ss 8.88e-16, ankle 4.49e-02, knee 1.07e-01, hip 1.64e-01, fz_stance 1.10e+01
+
+arm                              | camera: shear          moments        Fz      | imu: shear          moments        Fz
+no moment balance, no direction  |  +11.3 % (6/9)   +39.3 % (9/9)   +18.2 % |  +32.1 % (9/9)   +42.8 % (9/9)    +6.7 %
+balances and sensors only        |  +85.6 % (9/9)   +86.9 % (9/9)   +43.8 % |  +78.0 % (9/9)   +63.8 % (9/9)   +27.6 %
+
+Detail, subject means per column:
+== camera
+                                 stance     ds     ss  ankle   knee    hip  fz_stance
+arm                                                                                  
+balances and sensors only         4.963  6.589  2.941  0.180  0.267  0.418      8.650
+main                              2.675  3.473  1.651  0.148  0.127  0.183      6.016
+no moment balance, no direction   2.976  3.324  2.637  0.156  0.196  0.289      7.110
+== imu
+                                 stance     ds     ss  ankle   knee    hip  fz_stance
+arm                                                                                  
+balances and sensors only         7.049  7.813  6.227  0.242  0.359  0.666      9.347
+main                              3.960  3.908  3.990  0.203  0.198  0.347      7.325
+no moment balance, no direction   5.230  4.929  5.417  0.218  0.304  0.582      7.817

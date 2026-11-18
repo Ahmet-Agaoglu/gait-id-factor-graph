@@ -1,0 +1,52 @@
+direction_factor.py summary, 2026-11-18T14:07:57: 9 subjects, 53 trials; converged 212/212.
+Subject means, then the mean over subjects; b and the gap also as medians over trials (m BW).
+
+== camera: check vs the main run, max |diff| hip 0.0e+00, stance shear 0.0e+00; vs ablation (no direction) hip 0.0e+00, b 0.0e+00
+gap (Hdot - d_x Sz)/W in insole DS: median over trials -0.0328 m BW, subject-mean mean -0.0302; Hdot +0.0263, d_x Sz +0.0585 (medians); trials with gap < 0: 52/53
+b, main: median -0.0197 m BW
+b, no direction: median -0.0086 m BW
+arm               main  no direction  change_%
+shear_stance    2.6745        2.0546  -23.1789
+fz_stance       6.0160        6.0431    0.4507
+shear_ds        3.4728        2.6986  -22.2934
+fz_ds           6.9464        6.9752    0.4149
+shear_ss        1.6512        1.2123  -26.5835
+fz_ss           4.4996        4.5166    0.3782
+cop_stance_mm  26.9748       27.8543    3.2603
+ankle_all       0.1481        0.1628    9.9086
+ankle_ds        0.1386        0.1626   17.3226
+ankle_ss        0.2145        0.2300    7.2371
+ankle_swing     0.0024        0.0020  -16.9389
+knee_all        0.1268        0.1481   16.7920
+knee_ds         0.1586        0.1775   11.8818
+knee_ss         0.1506        0.1867   23.9833
+knee_swing      0.0049        0.0102  110.5368
+hip_all         0.1831        0.1814   -0.9480
+hip_ds          0.2875        0.2522  -12.2912
+hip_ss          0.1414        0.1902   34.4954
+hip_swing       0.0045        0.0169  272.1554
+
+== imu: check vs the main run, max |diff| hip 0.0e+00, stance shear 0.0e+00; vs ablation (no direction) hip 0.0e+00, b 0.0e+00
+gap (Hdot - d_x Sz)/W in insole DS: median over trials -0.0310 m BW, subject-mean mean -0.0310; Hdot +0.0241, d_x Sz +0.0568 (medians); trials with gap < 0: 53/53
+b, main: median -0.0089 m BW
+b, no direction: median +0.0281 m BW
+arm                main  no direction  change_%
+shear_stance     3.9596        3.3062  -16.5028
+fz_stance        7.3246        7.4449    1.6436
+shear_ds         3.9083        3.9363    0.7163
+fz_ds            8.0669        8.2648    2.4524
+shear_ss         3.9898        2.5042  -37.2352
+fz_ss            6.0592        6.0851    0.4264
+cop_stance_mm  104.0727      104.2771    0.1965
+ankle_all        0.2029        0.2507   23.5111
+ankle_ds         0.1765        0.2104   19.2062
+ankle_ss         0.2994        0.3770   25.9208
+ankle_swing      0.0111        0.0110   -1.2391
+knee_all         0.1985        0.2236   12.6535
+knee_ds          0.2415        0.2398   -0.7131
+knee_ss          0.2386        0.3029   26.9145
+knee_swing       0.0336        0.0363    8.1618
+hip_all          0.3474        0.4535   30.5148
+hip_ds           0.3958        0.4298    8.5988
+hip_ss           0.4432        0.6572   48.2748
+hip_swing        0.0783        0.0801    2.2607

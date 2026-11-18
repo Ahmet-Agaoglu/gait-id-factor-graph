@@ -1,0 +1,1 @@
+trial Subj05 walk_36; frames 4156-4504; speed 1.00 m/s

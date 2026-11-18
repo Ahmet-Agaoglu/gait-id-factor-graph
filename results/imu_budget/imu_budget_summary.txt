@@ -1,0 +1,10 @@
+wang_imu_budget.py, 2026-11-18T14:02:41: 9 subjects, 53 trials, 26 s. Medians over trials.
+alignment to the insole: reliable (total r >= 0.5) 38/53; their offset median 0.564 s (range 0.536-0.904), used for the others (Subj04 walk_09, Subj05 walk_09, Subj05 walk_18, Subj06 walk_09, Subj06 walk_18, Subj07 walk_09, Subj07 walk_18, Subj08 walk_09, Subj08 walk_54, Subj09 walk_09, Subj10 walk_09, Subj10 walk_18, Subj11 walk_09, Subj11 walk_18, Subj12 walk_09); total r median 0.728, side r min 0.495; frames short max 0
+diagnostic, IMU vs camera Sz lag after alignment: median -15.2 ms, RMS 17.6 ms, range -37.5..11.5, peak inside range 53/53, r median 0.947
+
+value   IMU                               difference  camera(total)  negative
+SX      0.0686 (subjects 0.0497-0.1146)  0.0490      0.0371         0
+SZ      0.0454 (subjects 0.0368-0.0643)  0.0493      0.0241         0
+SH      0.0336 (subjects 0.0266-0.0690)  0.0275      0.0178         0
+D_STD   0.0130 (subjects 0.0048-0.0240)  0.0001      0.0149         1
+CoP placement (m): IMU 0.0437 (subjects 0.0316-0.1456), difference 0.0442, negative 0; total with the sensor 15 mm: 0.0462

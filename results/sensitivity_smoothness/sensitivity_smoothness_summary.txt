@@ -1,0 +1,22 @@
+run_sensitivity.py summary, 2026-11-18T14:07:32: 9 subjects, 53 trials; graph converged 318/318. Subject means; change vs the main setting.
+Columns per case: stance shear change %, mean change % of the three joint-moment errors, and the columns where the graph led in the main run but no longer beats the best competitor ('-' = still ahead in all).
+check camera: main setting vs main.csv, max |diff| 0.00e+00
+check imu: main setting vs main.csv, max |diff| 0.00e+00
+
+row                        end   | camera: shear  moments  lost      | imu: shear  moments  lost
+smoothness                 low   |  -13.1 %    -2.8 %  -        |   -2.1 %    +0.7 %  -       
+smoothness                 high  |  +10.2 %    +3.2 %  stance,ds |   +4.4 %    +0.2 %  -       
+
+Detail, subject means per column (graph):
+== camera
+                 stance     ds     ss  ankle   knee    hip
+row        end                                            
+main       -      2.675  3.473  1.651  0.148  0.127  0.183
+smoothness high   2.948  3.898  1.691  0.150  0.131  0.193
+           low    2.325  2.938  1.569  0.149  0.125  0.170
+== imu
+                 stance     ds     ss  ankle   knee    hip
+row        end                                            
+main       -      3.960  3.908  3.990  0.203  0.198  0.347
+smoothness high   4.133  4.229  4.012  0.203  0.198  0.351
+           low    3.877  3.845  3.912  0.209  0.200  0.342

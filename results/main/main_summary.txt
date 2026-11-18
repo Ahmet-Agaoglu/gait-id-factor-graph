@@ -1,0 +1,35 @@
+run_main.py summary, 2026-11-18T14:03:34: 9 subjects, 53 trials. Subject means of trial values. Shear RMSE %BW (right foot, plate contact); joint moment RMSE N m/kg over the scoring window.
+graph converged 106/106, iterations median 6 (max 11); insole double support share median 0.320
+
+== camera
+method     stance       ds       ss    ankle     knee      hip   ankle_r   knee_r    hip_r
+graph       2.675    3.473    1.651    0.148    0.127    0.183     0.977    0.804    0.827
+zero        7.159    8.571    5.687    0.192    0.337    0.538     0.976    0.334    0.869
+newton      4.963    6.589    2.941    0.183    0.292    0.478     0.968    0.680    0.720
+ren         5.813    7.766    3.061    0.174    0.266    0.453     0.961    0.689    0.146
+pivot       2.897    3.657    2.068    0.169    0.183    0.251     0.974    0.771    0.820
+graph minus the best competitor (lowest subject mean in that column), paired over subjects:
+  stance  best pivot   2.897; graph 2.675; diff -0.222 (95 % -0.998..+0.554), -8 %, graph better in 5/9 subjects
+  ds      best pivot   3.657; graph 3.473; diff -0.184 (95 % -1.372..+1.005), -5 %, graph better in 5/9 subjects
+  ss      best pivot   2.068; graph 1.651; diff -0.417 (95 % -0.682..-0.153), -20 %, graph better in 8/9 subjects
+  ankle   best pivot   0.169; graph 0.148; diff -0.020 (95 % -0.029..-0.012), -12 %, graph better in 8/9 subjects
+  knee    best pivot   0.183; graph 0.127; diff -0.056 (95 % -0.072..-0.040), -31 %, graph better in 9/9 subjects
+  hip     best pivot   0.251; graph 0.183; diff -0.068 (95 % -0.090..-0.046), -27 %, graph better in 9/9 subjects
+info: graph Fz RMSE stance 6.02 %BW (insole 11.82); graph CoP 27.0 mm (insole 28.3); scale gR 0.963, gL 0.956; offset -0.0197 m BW
+
+== imu
+method     stance       ds       ss    ankle     knee      hip   ankle_r   knee_r    hip_r
+graph       3.960    3.908    3.990    0.203    0.198    0.347     0.924    0.595    0.544
+zero        7.159    8.571    5.687    0.249    0.348    0.621     0.942    0.299    0.713
+newton      7.049    7.813    6.227    0.242    0.390    0.708     0.941    0.567    0.422
+ren         9.258   11.601    6.403    0.239    0.446    0.852     0.929    0.484   -0.312
+pivot       4.463    4.600    4.322    0.243    0.224    0.435     0.941    0.687    0.428
+wang          nan      nan      nan    0.108    0.269    0.604     0.980    0.439    0.030
+graph minus the best competitor (lowest subject mean in that column), paired over subjects:
+  stance  best pivot   4.463; graph 3.960; diff -0.504 (95 % -1.164..+0.156), -11 %, graph better in 7/9 subjects
+  ds      best pivot   4.600; graph 3.908; diff -0.692 (95 % -1.595..+0.211), -15 %, graph better in 6/9 subjects
+  ss      best pivot   4.322; graph 3.990; diff -0.333 (95 % -0.807..+0.142), -8 %, graph better in 6/9 subjects
+  ankle   best wang    0.108; graph 0.203; diff +0.095 (95 % +0.020..+0.170), +89 %, graph better in 0/9 subjects
+  knee    best pivot   0.224; graph 0.198; diff -0.025 (95 % -0.058..+0.007), -11 %, graph better in 7/9 subjects
+  hip     best pivot   0.435; graph 0.347; diff -0.088 (95 % -0.151..-0.025), -20 %, graph better in 8/9 subjects
+info: graph Fz RMSE stance 7.32 %BW (insole 11.82); CoP not compared (the Xsens horizontal origin is arbitrary); scale gR 0.967, gL 0.963; offset -0.0089 m BW

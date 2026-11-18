@@ -1,0 +1,2 @@
+cop_mc.py, 2026-11-18T14:02:14: time shift SD 12.3 ms (measured), 30 replicas, contact threshold 70 N, 20 s. Medians over trials, mm.
+9 subjects, 53 trials: cop_mark t 6.1 c 5.6 v 2.2, cop_shoe t 3.5 c 3.5 v 0.4, cop_time t 4.9 c 1.5 v 4.6, cop_all t 8.5 c 6.8 v 5.3; total with the sensor 15 mm: median 17.3 mm

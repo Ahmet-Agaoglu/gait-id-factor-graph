@@ -1,0 +1,5 @@
+smoothness_ratio.py, 2026-11-18T14:02:46: 9 subjects, 53 trials, contact threshold 70 N, 5 s; single-support frames per trial median 3814.
+USED VALUE - ratio d2(Sx)/d2(Sz), kinematic, 6 Hz both: median 0.552 (IQR 0.456-0.702, range 0.313-1.703)
+  subject medians 0.421-1.003
+info - insole Fz d2 RMS, 6 Hz / raw: median 0.702 (IQR 0.605-0.827, range 0.330-0.995)
+info - kinematic Sx d2 RMS / insole raw d2 RMS: median 0.526 (IQR 0.439-0.698, range 0.187-1.426)

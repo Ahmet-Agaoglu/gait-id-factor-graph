@@ -1,0 +1,18 @@
+hip_center.py, 2026-11-18T14:08:31: 53 trials, 9 subjects; check: rebuilt x_G vs segs0 max |diff| 0.0e+00 m.
+Per subject (mean over trials), then median over trials. shift = hips moved forward to Harrington's AP position; moment = -dx_G S_z / W, mean over the insole's contact frames (m BW).
+            pd_mm  shift_mm  shift_x_mm   dxG_mm  moment_mBW
+subject                                                     
+Subj04   210.4688   44.8219     43.9504  34.7809     -0.0348
+Subj05   189.6028   39.3967     39.1433  30.9770     -0.0310
+Subj06   181.2340   37.2208     37.1547  29.4037     -0.0294
+Subj07   213.1874   45.5287     45.4775  35.9932     -0.0360
+Subj08   199.3759   41.9377     41.6321  32.9477     -0.0329
+Subj09   191.6902   39.9395     39.8366  31.5261     -0.0315
+Subj10   224.0402   48.3504     47.5188  37.6079     -0.0376
+Subj11   183.2259   37.7387     37.7123  29.8462     -0.0299
+Subj12   218.4365   46.8935     46.8786  37.1016     -0.0371
+pd_mm: median over trials 199.0337, subject means 181.2340 to 224.0402
+shift_mm: median over trials 41.8488, subject means 37.2208 to 48.3504
+shift_x_mm: median over trials 41.6107, subject means 37.1547 to 47.5188
+dxG_mm: median over trials 32.9336, subject means 29.4037 to 37.6079
+moment_mBW: median over trials -0.0329, subject means -0.0376 to -0.0294

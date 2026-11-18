@@ -1,0 +1,4 @@
+planar_vs_lab.py summary, 2026-11-18T14:08:06: 9 subjects, 53 trials. RMSE in N m/kg (r), subject means then the mean over subjects; frames as the main run (all scored frames, swing included).
+ankle  planar vs lab 0.119 (0.99); WP vs planar 0.108 (0.98); WP vs lab 0.141 (0.98); check WP vs planar = main run wang_ankle: 0.108
+knee   planar vs lab 0.114 (0.86); WP vs planar 0.269 (0.44); WP vs lab 0.261 (0.47); check WP vs planar = main run wang_knee: 0.269
+hip    planar vs lab 0.201 (0.83); WP vs planar 0.604 (0.03); WP vs lab 0.601 (0.08); check WP vs planar = main run wang_hip: 0.604

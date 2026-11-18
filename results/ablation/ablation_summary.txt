@@ -1,0 +1,27 @@
+run_ablation.py summary, 2026-11-18T14:04:11: 9 subjects, 53 trials; converged 530/530. Subject means; change vs main (plus = error grows when the part is removed, i.e. the part helps); in brackets the number of subjects where removing the part makes the error larger.
+check camera: main vs main.csv max |diff| 0.00e+00
+check imu: main vs main.csv max |diff| 0.00e+00
+
+arm                    | camera: shear          moments        Fz      | imu: shear          moments        Fz
+no direction           |  -23.2 % (2/9)    +8.6 % (8/9)    +0.5 % |  -16.5 % (2/9)   +22.2 % (7/9)    +1.6 %
+no force smoothness    |  +21.8 % (9/9)    +7.7 % (9/9)    +4.6 % |  +10.3 % (8/9)    +1.7 % (6/9)   +12.5 %
+no moment balance      |  +22.7 % (9/9)   +16.3 % (9/9)    +4.9 % |  +29.7 % (9/9)   +17.6 % (9/9)    +0.7 %
+no scale and offset    |   -3.5 % (1/9)   +21.8 % (9/9)    +2.8 % |   -5.7 % (1/9)    +0.9 % (6/9)    +2.2 %
+
+Detail, subject means per column:
+== camera
+                     stance     ds     ss  ankle   knee    hip  fz_stance
+arm                                                                      
+main                  2.675  3.473  1.651  0.148  0.127  0.183      6.016
+no direction          2.055  2.699  1.212  0.163  0.148  0.181      6.043
+no force smoothness   3.256  4.383  1.715  0.155  0.136  0.204      6.294
+no moment balance     3.281  3.741  2.748  0.141  0.152  0.245      6.312
+no scale and offset   2.581  3.400  1.374  0.166  0.164  0.226      6.184
+== imu
+                     stance     ds     ss  ankle   knee    hip  fz_stance
+arm                                                                      
+main                  3.960  3.908  3.990  0.203  0.198  0.347      7.325
+no direction          3.306  3.936  2.504  0.251  0.224  0.453      7.445
+no force smoothness   4.368  4.738  3.944  0.209  0.197  0.357      8.242
+no moment balance     5.135  4.147  5.626  0.185  0.252  0.469      7.376
+no scale and offset   3.735  3.789  3.590  0.215  0.191  0.348      7.489
